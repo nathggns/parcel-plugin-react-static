@@ -1,3 +1,5 @@
 module.exports = bundler => {
-  bundler.addPackager('html', require.resolve('./HTML'));
+  if (!bundler.options.watch) {
+        bundler.addPackager('html', require.resolve('./HTML'));
+    }
 };
