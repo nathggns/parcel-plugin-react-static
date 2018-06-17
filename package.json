@@ -1,0 +1,30 @@
+{
+  "name": "parcel-plugin-react-static",
+  "version": "0.1.0",
+  "description": "Parcel plugin to generate static builds of React applications",
+  "main": "index.js",
+  "author": "Nate Higgins",
+  "license": "MIT",
+  "repository": "https://github.com/nathggns/parcel-plugin-react-static",
+  "homepage": "https://github.com/nathggns/parcel-plugin-react-static",
+  "keywords": [
+    "parcel",
+    "react",
+    "ssr",
+    "styled-components",
+    "static",
+    "plugin",
+    "bundler",
+    "build"
+  ],
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "parcel-bundler": "^1.9.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "styled-components": "^3.3.2"
+  },
+  "engines": {
+    "node": ">= 8"
+  }
+}
