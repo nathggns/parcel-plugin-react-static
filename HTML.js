@@ -3,7 +3,7 @@ const Bundler = require('parcel-bundler');
 const logger = require('parcel-bundler/src/Logger');
 const DefaultHTML = require('parcel-bundler/src/packagers/HTMLPackager');
 const { ServerStyleSheet } = require('styled-components');
-const { renderToString } = require('react-dom/server');
+const { renderToStaticMarkup } = require('react-dom/server');
 const cheerio = require('cheerio');
 
 module.exports = class extends DefaultHTML {
@@ -17,7 +17,7 @@ module.exports = class extends DefaultHTML {
       const App = require(name).default;
 
       const sheet = new ServerStyleSheet();
-      const markup = renderToString(sheet.collectStyles(
+      const markup = renderToStaticMarkup(sheet.collectStyles(
           React.createElement(App, {}, null)
       ));
       const styles = sheet.getStyleTags();
